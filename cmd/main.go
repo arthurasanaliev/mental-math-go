@@ -23,7 +23,7 @@ func main() {
 		case 1:
 			questions.Addition()
 		case 2:
-			questions.Substruction()
+			questions.Substraction()
 		case 3:
 			questions.Multiplication()
 		case 4:

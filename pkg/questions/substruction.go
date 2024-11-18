@@ -1,5 +1,0 @@
-package questions
-
-func Substruction() {
-
-}
