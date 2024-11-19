@@ -12,7 +12,7 @@ func main() {
 	for practice {
 		fmt.Println("Choose a topic you want to practice:")
 		fmt.Println("1 -- Addition")
-		fmt.Println("2 -- Substruction")
+		fmt.Println("2 -- Substraction")
 		fmt.Println("3 -- Multiplication")
 		fmt.Println("4 -- Division")
 
