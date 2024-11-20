@@ -7,10 +7,8 @@ import (
 	"time"
 )
 
-// TODO: adjust scoring for different operations
-
 // base implements base functionality for arithmetics
-func base(op string) error {
+func base(op string, goodScore float64) error {
 	var questionType string
 	switch op {
 	case "+":
@@ -35,7 +33,12 @@ func base(op string) error {
 	startTime := time.Now()
 
 	for i := 0; i < 10; i++ {
-		a, b := utils.GetNumbers(10, 99)
+		var a, b int
+		if op == "*" {
+			a, b = utils.GetNumbers(10, 999)
+		} else {
+			a, b = utils.GetNumbers(10, 99)
+		}
 		fmt.Printf("%d %s %d = ", a, op, b)
 		var inp int
 		fmt.Scan(&inp)
@@ -64,7 +67,7 @@ func base(op string) error {
 
 	var color1, color2 string
 
-	if elapsedTime.Seconds() >= 36.0 {
+	if elapsedTime.Seconds() >= goodScore {
 		color1 = utils.Red
 	} else {
 		color1 = utils.Green
