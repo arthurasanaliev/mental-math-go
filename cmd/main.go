@@ -3,10 +3,16 @@ package main
 import (
 	"fmt"
 	"github.com/arthurasanaliev/mental-math-go/pkg/questions"
+	"time"
 )
 
 // main is the entry point of the program
 func main() {
+	start := time.Now()
+	defer func() {
+		fmt.Println(time.Since(start))
+	}()
+
 	practice := true
 
 	for practice {
